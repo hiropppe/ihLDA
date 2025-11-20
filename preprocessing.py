@@ -163,6 +163,11 @@ if __name__ == '__main__':
     save_folder = "./input/sample/"
     random_pick = -1 # all -> -1
 
+    import nltk
+    nltk.download("stopwords")
+    nltk.download("wordnet")
+    nltk.download("omw-1.4")
+
     preprocess = Preprocess(folder, save_folder, random_pick)
 
     print("Finished.")
