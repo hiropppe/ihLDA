@@ -1,0 +1,13 @@
+services:
+    ihlda:
+        build:
+            context: .
+        image: ihlda
+        container_name: ihlda
+        network_mode: host
+        tty: true
+        volumes:
+            - .:/workspaces/ihLDA
+            - .jupyter:/root/.jupyter
+        command: ["bash"]
+
