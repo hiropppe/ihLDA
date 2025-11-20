@@ -44,6 +44,6 @@ ENV PATH="${PATH}:/home/${USERNAME}/.local/bin"
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 RUN echo 'eval "$(uv generate-shell-completion bash)"' >> $HOME/.bashrc
-#RUN uv sync --reinstall
+RUN uv sync --reinstall
 
 CMD ["uv", "run", "jupyter", "lab", "--allow-root", "--ip=0.0.0.0", "--ServerApp.token=''", "--no-browser"]
